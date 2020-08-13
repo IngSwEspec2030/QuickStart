@@ -41,8 +41,8 @@ Profesional en Ingeniería de Sistemas, apasionado por el emprendimiento y la cr
 <b>Responsabilidades:</b>
 
 <ul>
-  <li>Crear y administrar el roadmap del proyecto</li>
-  <li>Definir la estrategia de earlyadopter y masificación</li>
-  <li>Administrar las prioridades de los stakeholders</li>
-  <li>Documentar y realizar los planes de acción para insights</li>
+  <li>Crear y administrar el roadmap del producto</li>
+  <li>Definir la estrategia de earlyadopter y masificación del producto</li>
+  <li>Administrar las prioridades de los stakeholders sobre el producto</li>
+  <li>Documentar y realizar los planes de acción para insights del producto</li>
 </ul>
