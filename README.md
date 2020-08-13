@@ -21,6 +21,8 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
   
 <b>Yuri Andrea Carrillo Moreno (CTO)</b>
 
+<p align="left"> <img src="https://github.com/IngSwEspec2030/QuickTask/blob/master/20200813_182003%20(1).jpg" width="300"/></p> 
+
 
 Ingeniera de Sistemas con experiencia en coordinación de equipos de desarrollo de software para la construcción de aplicaciones para el sector financiero y corporativo. 
 
