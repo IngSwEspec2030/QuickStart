@@ -5,9 +5,9 @@
 <p align="left"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="300"/></p> 
 
 
-<body style=”text-align: justify;”> Ingeniera de sistemas enfocada hacía la parte de desarrollo, generalmente como fullstack. Dentro de mi experiencia he manejado herramientas como Java, JPA, Microsoft Visual Studio, MySQL, Telerik Reporting, JavaScript, Html, Bootstrap, Visual Basic, C#, SQL Server, PostgreSQL, Linux, Xamarin, MVC y para el control de versiones Team Foundation Server y GitHub. También manejo como metodologías de trabajo ágiles, SCRUM.
+Ingeniera de sistemas enfocada hacía la parte de desarrollo, generalmente como fullstack. Dentro de mi experiencia he manejado herramientas como Java, JPA, Microsoft Visual Studio, MySQL, Telerik Reporting, JavaScript, Html, Bootstrap, Visual Basic, C#, SQL Server, PostgreSQL, Linux, Xamarin, MVC y para el control de versiones Team Foundation Server y GitHub. También manejo como metodologías de trabajo ágiles, SCRUM.
 
-Me considero una persona responsable, puntual, proactiva, apasionada, que busca crecer personalmente y profesionalmente. Me encanta retarme y aprender nuevas herramientas; siempre estoy abierta a diferentes opciones.</body>
+Me considero una persona responsable, puntual, proactiva, apasionada, que busca crecer personalmente y profesionalmente. Me encanta retarme y aprender nuevas herramientas; siempre estoy abierta a diferentes opciones.
 
 <b>Responsabilidades:</b>
 
