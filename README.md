@@ -26,6 +26,11 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
 <b>Francisco Alejandro Niño Suarez (Arquitecto de soluciones)</b>
 
 <b>Responsabilidades:</b>
+ - Gestión de requerimientos funcionales y no funcionales.
+ - Selección de tecnologías a utilizar.
+ - Diseño y mejoras de la arquitectura.
+ - Dirección técnica del software.
+ - Asegurador de calidad.
 
 <b>Diego Armando Gomez Cuervo (CPO)</b>
 
