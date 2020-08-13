@@ -1,8 +1,8 @@
 # Presentación del grupo
 
-<u>Cindy Lorena Hernández Merchán (Rol)</u>
+<b>Cindy Lorena Hernández Merchán (Rol)</b>
 
-<p align="center"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="350"/> <img src="your_relative_path_here_number_2_large_name" width="350"/> </p> 
+<p align="left"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="350"/> <img src="your_relative_path_here_number_2_large_name" width="350"/> </p> 
 
 
 Ingeniera de sistemas enfocada hacía la parte de desarrollo, generalmente como fullstack. Dentro de mi experiencia he manejado herramientas como Java, JPA, Microsoft Visual Studio, MySQL, Telerik Reporting, JavaScript, Html, Bootstrap, Visual Basic, C#, SQL Server, PostgreSQL, Linux, Xamarin, MVC y para el control de versiones Team Foundation Server y GitHub. También manejo como metodologías de trabajo agiles SCRUM.
