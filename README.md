@@ -23,6 +23,11 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
 
 <b>Responsabilidades:</b>
 
+Responsabilidades:
+  -  Planificación del proyecto
+  -  Seguimiento de cronograma
+  -  Solución de problemas
+
 <b>Francisco Alejandro Niño Suarez (Arquitecto de soluciones)</b>
 
 <b>Responsabilidades:</b>
