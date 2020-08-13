@@ -21,6 +21,8 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
 
 <b>Diego Armando Gomez Cuervo (Rol)</b>
 
+<p align="left"> <img src="https://avatars2.githubusercontent.com/u/1482074?s=460&u=104af5fa3617a34e84ce2383b94066572abcbfbe&v=4" width="300"/></p> 
+
 Profesional en Ingeniería de Sistemas, apasionado por el emprendimiento y la creación de valor desde los diferentes campos de acción de mi profesión, mis habilidades se han desarrollado en dos frentes, técnico y gerencial. En el campo técnico me he actualizado constantemente, he aprendido nuevas tecnologías y mejores prácticas ya que en mi trayectoria he liderado equipos técnicos, proyectos y empresas. En el ámbito gerencial desarrolle habilidades de planeación estratégica, liderazgo, ejecución, innovación, desarrollo de estrategias comerciales, de mercadeo, operativas y administrativas. Soy un profesional enfocado y comprometido con el cumplimiento de metas. Busco constantemente nuevos retos y oportunidades que me aporten crecimiento personal y profesionalmente.
 
 <b>Responsabilidades:</b>
