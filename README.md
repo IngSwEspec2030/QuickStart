@@ -1,5 +1,6 @@
 <h1>QuickTask</h1>
-# Presentación del grupo
+
+<h2>Presentación del grupo</h2>
 
 <b>Cindy Lorena Hernández Merchán (Directora de desarrollo)</b>
 
