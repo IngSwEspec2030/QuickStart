@@ -42,6 +42,7 @@ Profesional en Ingeniería de Sistemas, apasionado por el emprendimiento y la cr
 
 <ul>
   <li>Crear y administrar el roadmap del proyecto</li>
-  <li>Definir la estrategia de earlyadopter y macificacion</li>
-  <li>Administrar los intereses de los stakeholders</li>
+  <li>Definir la estrategia de earlyadopter y masificación</li>
+  <li>Administrar las prioridades de los stakeholders</li>
+  <li>Documentar y realizar los planes de acción para insights</li>
 </ul>
