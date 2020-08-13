@@ -1,6 +1,6 @@
 # Presentación del grupo
 
-<b>Cindy Lorena Hernández Merchán (Rol)</b>
+<b>Cindy Lorena Hernández Merchán (Directora de desarrollo)</b>
 
 <p align="left"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="300"/></p> 
 
@@ -11,15 +11,15 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
 
 <b>Responsabilidades:</b>
 
-<b>Yuri Andrea Carrillo Moreno (Rol)</b>
+<b>Yuri Andrea Carrillo Moreno (CTO)</b>
 
 <b>Responsabilidades:</b>
 
-<b>Francisco Alejandro Niño Suarez (Rol)</b>
+<b>Francisco Alejandro Niño Suarez (Arquitecto de soluciones)</b>
 
 <b>Responsabilidades:</b>
 
-<b>Diego Armando Gomez Cuervo (Rol)</b>
+<b>Diego Armando Gomez Cuervo (CPO)</b>
 
 <p align="left"> <img src="https://avatars2.githubusercontent.com/u/1482074?s=460&u=104af5fa3617a34e84ce2383b94066572abcbfbe&v=4" width="300"/></p> 
 
