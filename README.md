@@ -7,7 +7,7 @@
 
 Ingeniera de sistemas enfocada hacía la parte de desarrollo, generalmente como fullstack. Dentro de mi experiencia he manejado herramientas como Java, JPA, Microsoft Visual Studio, MySQL, Telerik Reporting, JavaScript, Html, Bootstrap, Visual Basic, C#, SQL Server, PostgreSQL, Linux, Xamarin, MVC y para el control de versiones Team Foundation Server y GitHub. También manejo como metodologías de trabajo ágiles, SCRUM.
 
-Me considero una persona responsable, puntual, proactiva, apasionada, que busca crecer personalmente y profesionalmente. Me encanta retarme y aprender nuevas herramientas, siempre estoy abierta a diferentes opciones.
+Me considero una persona responsable, puntual, proactiva, apasionada, que busca crecer personalmente y profesionalmente. Me encanta retarme y aprender nuevas herramientas; siempre estoy abierta a diferentes opciones.
 
 <b>Responsabilidades:</b>
 
