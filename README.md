@@ -21,6 +21,11 @@ Me considero una persona responsable, puntual, proactiva, apasionada, que busca 
   
 <b>Yuri Andrea Carrillo Moreno (CTO)</b>
 
+
+Ingeniera de Sistemas con experiencia en coordinación de equipos de desarrollo de software para la construcción de aplicaciones para el sector financiero y corporativo. 
+
+Con conocimientos técnicos en  Java, J2EE, Struts, JavaScript, Servlets, JSF, SQL, EJB, Hibernate, JPA, Daos, Oracle, Mysql, Tomcat, Jboss, Weblogic, Wildfly, MQServer, Crystal Reports, Jenkins, GIT, maven.
+
 <b>Responsabilidades:</b>
 
 Responsabilidades:
