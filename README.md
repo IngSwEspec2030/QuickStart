@@ -1,6 +1,6 @@
 # Presentación del grupo
 
-Cindy Lorena Hernández Merchán (Rol)
+<u>Cindy Lorena Hernández Merchán (Rol)</u>
 
 <p align="center"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="350"/> <img src="your_relative_path_here_number_2_large_name" width="350"/> </p> 
 
@@ -9,7 +9,7 @@ Ingeniera de sistemas enfocada hacía la parte de desarrollo, generalmente como 
 
 Me considero una persona responsable, puntual, proactiva, apasionada, que busca crecer personalmente y profesionalmente. Me encanta retarme y aprender nuevas herramientas, siempre estoy abierta a diferentes opciones.
 
-Responsabilidades:
+<u>Responsabilidades:</u>
 
 Yuri Andrea Carrillo Moreno (Rol)
 
