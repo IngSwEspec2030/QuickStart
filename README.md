@@ -1,4 +1,4 @@
-<h1>QuickTask</h1>
+<h1>Softwork - QuickTask</h1>
 
 <h2>Presentación del grupo</h2>
 
