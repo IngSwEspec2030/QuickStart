@@ -2,7 +2,7 @@
 
 <h2>Presentación del grupo</h2>
 
-<b>Cindy Lorena Hernández Merchán (Directora de desarrollo)</b>
+<b>Cindy Lorena Hernández Merchán (Líder de desarrollo)</b>
 
 <p align="left"> <img src="https://github.com/IngSwEspec2030/QuickStart/blob/master/WhatsApp%20Image%202020-08-07%20at%207.31.39%20PM.jpeg" width="300"/></p> 
 
