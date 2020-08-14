@@ -37,6 +37,13 @@ Responsabilidades:
 
 <b>Francisco Alejandro Niño Suarez (Arquitecto de soluciones)</b>
 
+<p align="left"> <img src="https://avatars0.githubusercontent.com/u/64390740?s=460&u=23bba49715da5eee503f5e3ac020a5ec29d42420&v=4" width="300"/></p> 
+
+Alejandro Niño es un profesional en Ingeniería de sistemas, especialista en Arquitectura Empresarial de Software.
+Con una amplia experiencia en el desarrollo de aplicaciones de software como desarrollador, líder técnico y arquitecto en el sectot financiero y bursátil.
+Interesado en proyectos de transformación digital e innovación implementando soluciones con arquitecturas actuales como Microservicios que se ejecutan en ambientes On Premise, Cloud o Híbridos.
+Siempre adquiriendo nuevos conocimientos y aprendiendo día a día.
+
 <b>Responsabilidades:</b>
  - Gestión de requerimientos funcionales y no funcionales.
  - Selección de tecnologías a utilizar.
