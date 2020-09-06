@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="QuickTaskApp.Views.WelcomePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bienvenido" TextColor="#01568C" FontSize="30" Margin="15" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+            <Label Text="QuickTask es una herramienta para publicar y desarrollar microtareas que le permitirá:" TextColor="#4E4E4E" HorizontalOptions="CenterAndExpand" Margin="25" HorizontalTextAlignment="Center" FontSize="24"/>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="Reloj.PNG" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Ganar tiempo" HorizontalOptions="StartAndExpand" FontSize="28" TextColor="#4E4E4E"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="20">
+                <Image Source="Dinero.PNG" HorizontalOptions="EndAndExpand" WidthRequest="50" HeightRequest="50"/>
+                <Label Text="Ganar dinero" HorizontalOptions="StartAndExpand" FontSize="28" TextColor="#4E4E4E"/>
+            </StackLayout>
+            <Button Text="Ver tareas" FontSize="Medium" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="45,35" BackgroundColor="#01568C" TextColor="White" BorderWidth="1" CornerRadius="5" Clicked="Tasklist_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

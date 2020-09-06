@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="QuickTaskApp.Views.TaskListPage">
+    <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+    <ListView x:Name="MyListView"
+            ItemsSource="{Binding Items}"
+            HasUnevenRows="True"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement"
+            SeparatorVisibility="None">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                            <Image Source="persona.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+                            <Label Text="{Binding Text}" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="20"/>
+                            <Label Text="{Binding Price}" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="24"/>
+                        </StackLayout>
+                        <Label Text="{Binding Description}" FontSize="14" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="15,0,0,0"  TextColor="#ACACAC" HeightRequest="100"/>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                            <Label Text="{Binding Quantity}" HorizontalOptions="StartAndExpand" Margin="15" HorizontalTextAlignment="Start" FontSize="14"/>
+                            <Button Text="Conocer más" HorizontalOptions="EndAndExpand" TextColor="#5EB8EC" Margin="15,0" BackgroundColor="Transparent" FontSize="14"/>
+                        </StackLayout>
+                        <BoxView BackgroundColor="LightGray" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+        <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" VerticalOptions="EndAndExpand" BackgroundColor="LightGray"/>
+        <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HeightRequest="60" BackgroundColor="Transparent">
+            <ImageButton Source="Guardadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Buscar.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Crear.png" WidthRequest="70" HeightRequest="70" HorizontalOptions="CenterAndExpand" BackgroundColor="White" Clicked="CreateButton_Clicked"/>
+            <ImageButton Source="Realizadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+            <ImageButton Source="Perfil.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

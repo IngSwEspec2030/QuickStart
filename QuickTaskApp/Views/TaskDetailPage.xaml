@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="QuickTaskApp.Views.TaskDetailPage">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+            <!--<Label Text="Tarea" TextColor="#01568C" FontSize="20" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />-->
+            <Label Margin="25,25" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#ACACAC" HeightRequest="120" Text="Lorem ipsum dolor sit amet consectetur adipiscing, elit sapien primis mi inceptos porta massa, accumsan risus leo conubia curae. Ac porta velit vitae porttitor pharetra scelerisque hac, curae nisi felis cras ridiculus facilisis tempus, nec etiam laoreet vivamus rutrum elementum."/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="20,0">
+                <Image Source="persona.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+                <Label Text="Diego Goméz" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="18"/>
+                <Label Text="Disponibles: 5" TextColor="#01568C" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="18"/>
+            </StackLayout>
+            <Label Text="Condiciones" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+            <Label Margin="25,5" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#ACACAC" HeightRequest="120" Text="Lorem ipsum dolor sit amet consectetur adipiscing, elit sapien primis mi inceptos porta massa, accumsan risus leo conubia curae. Ac porta velit vitae porttitor pharetra scelerisque hac, curae nisi felis cras ridiculus facilisis tempus, nec etiam laoreet vivamus rutrum elementum."/>
+            <Label Text="PAGA $2,500" TextColor="#01568C" FontSize="40" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+            <Button Text="Tomar" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" TextColor="White" BackgroundColor="#01568C" CornerRadius="5"/>
+            <Button Text="Me interesa" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" BorderWidth="1" BorderColor="#01568C" TextColor="#01568C" BackgroundColor="White" CornerRadius="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
