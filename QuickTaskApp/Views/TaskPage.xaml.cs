@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickTaskApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,8 @@ namespace QuickTaskApp.Views
 
         async private void Save_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage()) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea"});
+            Item item = new Item();
+            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(item)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea"});
         }
     }
 }

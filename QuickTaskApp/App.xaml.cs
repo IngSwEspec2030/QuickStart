@@ -15,7 +15,7 @@ namespace QuickTaskApp
         public static string AzureBackendUrl =
             DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
         public static bool UseMockDataStore = true;
-
+        public static string AWSBackednUrl = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080";
         public App()
         {
             InitializeComponent();

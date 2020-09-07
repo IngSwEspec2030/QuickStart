@@ -19,13 +19,13 @@
                     <StackLayout Padding="8,8,8,8" Orientation="Vertical">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
                             <Image Source="persona.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" BackgroundColor="Transparent"/>
-                            <Label Text="{Binding Text}" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="20"/>
-                            <Label Text="{Binding Price}" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="24"/>
+                            <Label Text="{Binding Text}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="20"/>
+                            <Label Text="{Binding Price, StringFormat='$ {0}'}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="24"/>
                         </StackLayout>
-                        <Label Text="{Binding Description}" FontSize="14" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="15,0,0,0"  TextColor="#ACACAC" HeightRequest="100"/>
+                            <Label Text="{Binding Description}" TextColor="#4E4E4E" FontSize="18" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="15,0,0,0" HeightRequest="80"/>
                         <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
-                            <Label Text="{Binding Quantity}" HorizontalOptions="StartAndExpand" Margin="15" HorizontalTextAlignment="Start" FontSize="14"/>
-                            <Button Text="Conocer más" HorizontalOptions="EndAndExpand" TextColor="#5EB8EC" Margin="15,0" BackgroundColor="Transparent" FontSize="14"/>
+                                <Label Text="{Binding Quantity, StringFormat='Requiere: {0}'}" HorizontalOptions="StartAndExpand" TextColor="#4E4E4E" Margin="15" HorizontalTextAlignment="Start" FontSize="18"/>
+                            <Label Text="Conocer más" HorizontalOptions="EndAndExpand" TextColor="#5EB8EC" Margin="15" BackgroundColor="Transparent" FontSize="18"/>
                         </StackLayout>
                         <BoxView BackgroundColor="LightGray" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
                     </StackLayout>

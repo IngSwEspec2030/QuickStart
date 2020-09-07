@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuickTaskApp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,10 @@ namespace QuickTaskApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TaskDetailPage : ContentPage
     {
-        public TaskDetailPage()
+        public TaskDetailPage(Item item)
         {
             InitializeComponent();
+            BindingContext = item;
         }
         async private void CreateButton_Clicked(object sender, EventArgs e)
         {
