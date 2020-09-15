@@ -22,5 +22,11 @@ namespace QuickTaskApp.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
         }
+
+        private async void BtnTomar_Clicked(object sender, EventArgs e)
+        {
+            Item item = BindingContext as Item;
+            await Navigation.PushModalAsync(new NavigationPage(new TaskTakePage(item)));
+        }
     }
 }

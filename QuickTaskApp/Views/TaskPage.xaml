@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:QuickTaskApp.Controller"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
              x:Class="QuickTaskApp.Views.TaskPage">
@@ -11,21 +12,27 @@
         <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
             <Label Text="Información de la tarea" TextColor="#01568C" FontSize="20" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
             <Frame BorderColor="Transparent" Padding="0" Margin="25,5" CornerRadius="5" BackgroundColor="#F0F0F0">
-                <local:PlaceholderEditor Margin="0" HeightRequest="175" BackgroundColor="Transparent" Placeholder="Describa la tarea"/>
+                <local:PlaceholderEditor Margin="0" Text="{Binding Description}" HeightRequest="175" BackgroundColor="Transparent" Placeholder="Describa la tarea"/>
             </Frame>
             <Frame BorderColor="Transparent" Padding="0" Margin="25,5" CornerRadius="5" BackgroundColor="#F0F0F0">
-                <local:PlaceholderEditor Margin="0" HeightRequest="175" BackgroundColor="Transparent" Placeholder="Condiciones de la tarea"/>
+                <local:PlaceholderEditor Margin="0" HeightRequest="175" Text="{Binding condtarea}" BackgroundColor="Transparent" Placeholder="Condiciones de la tarea"/>
             </Frame>
+            <StackLayout Orientation="Horizontal" HeightRequest="50" Margin="0,15">
+                <Label Text="Vencimiento" Margin="25,0" FontSize="20" VerticalOptions="CenterAndExpand"/>
+                <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" Margin="0,5,25,5" Padding="0">
+                    <DatePicker MinimumDate="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:dd, MMMM, yyyy}'}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                </Frame>
+            </StackLayout>
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="25,5" Padding="0">
-                <local:MyEntry BackgroundColor="Transparent" Placeholder="Valor a pagar por cada entrega" Keyboard="Numeric" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
+                <local:MyEntry BackgroundColor="Transparent" Text="{Binding Price}" Placeholder="Valor a pagar por cada entrega" Keyboard="Numeric" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
             </Frame>
             <StackLayout Orientation="Horizontal" HeightRequest="50" Margin="0,15">
                 <Label Text="Cantidad" Margin="25,0" FontSize="20" VerticalOptions="CenterAndExpand"/>
                 <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" Margin="0,5,25,5" Padding="0">
-                    <local:MyEntry BackgroundColor="#F0F0F0" Placeholder="Enter your name" HorizontalOptions="FillAndExpand" PlaceholderColor="#F0F0F0" Keyboard="Numeric"/>
+                    <local:MyEntry BackgroundColor="#F0F0F0" Text="{Binding Quantity}" Placeholder="Unidades tarea" HorizontalOptions="FillAndExpand" PlaceholderColor="#F0F0F0" Keyboard="Numeric"/>
                 </Frame>
             </StackLayout>
-            <Button Text="Publicar" FontSize="Medium" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="25" BackgroundColor="#01568C" TextColor="White" BorderWidth="1" CornerRadius="5" Clicked="Save_Clicked"/>
+            <Button Text="Publicar" Command="{Binding GuardarTarea}" FontSize="Medium" HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand" Margin="25" BackgroundColor="#01568C" TextColor="White" BorderWidth="1" CornerRadius="5" Clicked="Save_Clicked"/>
             <BoxView HorizontalOptions="FillAndExpand" HeightRequest="0.5" VerticalOptions="EndAndExpand" BackgroundColor="White"/>
             <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HeightRequest="60" BackgroundColor="White" Margin="0">
                 <ImageButton Source="Guardadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>

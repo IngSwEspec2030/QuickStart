@@ -7,32 +7,32 @@
              NavigationPage.HasNavigationBar="False"
              x:Class="QuickTaskApp.Views.TaskListPage">
     <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
-    <ListView x:Name="MyListView"
+        <ListView x:Name="MyListView"
             ItemsSource="{Binding Items}"
             HasUnevenRows="True"
             ItemTapped="Handle_ItemTapped"
             CachingStrategy="RecycleElement"
             SeparatorVisibility="None">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Padding="8,8,8,8" Orientation="Vertical">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
-                            <Image Source="persona.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" BackgroundColor="Transparent"/>
-                            <Label Text="{Binding Text}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="20"/>
-                            <Label Text="{Binding Price, StringFormat='$ {0}'}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="24"/>
-                        </StackLayout>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                                <Image Source="persona.png" WidthRequest="40" HeightRequest="40" HorizontalOptions="Start" BackgroundColor="Transparent"/>
+                                <Label Text="{Binding Text}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="StartAndExpand" Margin="0,5" HorizontalTextAlignment="Start" FontSize="20"/>
+                                <Label Text="{Binding Price, StringFormat='$ {0}'}" TextColor="#4E4E4E" FontAttributes="Bold" HorizontalOptions="EndAndExpand" Margin="20,5" HorizontalTextAlignment="End" FontSize="24"/>
+                            </StackLayout>
                             <Label Text="{Binding Description}" TextColor="#4E4E4E" FontSize="18" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Margin="15,0,0,0" HeightRequest="80"/>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
                                 <Label Text="{Binding Quantity, StringFormat='Requiere: {0}'}" HorizontalOptions="StartAndExpand" TextColor="#4E4E4E" Margin="15" HorizontalTextAlignment="Start" FontSize="18"/>
-                            <Label Text="Conocer más" HorizontalOptions="EndAndExpand" TextColor="#5EB8EC" Margin="15" BackgroundColor="Transparent" FontSize="18"/>
+                                <Label Text="Conocer más" HorizontalOptions="EndAndExpand" TextColor="#5EB8EC" Margin="15" BackgroundColor="Transparent" FontSize="18"/>
+                            </StackLayout>
+                            <BoxView BackgroundColor="LightGray" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
                         </StackLayout>
-                        <BoxView BackgroundColor="LightGray" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
         <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" VerticalOptions="EndAndExpand" BackgroundColor="LightGray"/>
         <StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" HeightRequest="60" BackgroundColor="Transparent">
             <ImageButton Source="Guardadas.png" WidthRequest="60" HeightRequest="60" HorizontalOptions="CenterAndExpand" BackgroundColor="White"/>
