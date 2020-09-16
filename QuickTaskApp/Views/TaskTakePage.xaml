@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:QuickTaskApp.Controller"
+             NavigationPage.HasNavigationBar="False"
              mc:Ignorable="d"
              x:Class="QuickTaskApp.Views.TaskTakePage">
     <ContentPage.Content>
