@@ -26,7 +26,7 @@ namespace QuickTaskApp.Views
         private async void BtnTomar_Clicked(object sender, EventArgs e)
         {
             Item item = BindingContext as Item;
-            await Navigation.PushModalAsync(new NavigationPage(new TaskTakePage(item)));
+            await Navigation.PushModalAsync(new NavigationPage(new TaskTakePage(item)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Tarea" });
         }
     }
 }

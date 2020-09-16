@@ -7,22 +7,25 @@
              mc:Ignorable="d"
              x:Class="QuickTaskApp.Views.TaskTakePage">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
-            <!--<Label Text="Tarea" TextColor="#01568C" FontSize="20" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />-->
-            <Label Margin="25,25" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding Description}"/>
-            <Label Text="Disponibles: 5" TextColor="#01568C" HorizontalOptions="EndAndExpand" Margin="25,5"/>
-            <Label Text="Condiciones" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
-            <Label Margin="25,5" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding condtarea}"/>
-            <Label Text="Desarrollo" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
-            <Frame BorderColor="Transparent" Padding="0" Margin="25,5" CornerRadius="5" BackgroundColor="#F0F0F0">
-                <local:PlaceholderEditor Margin="0" Text="{Binding Description}" HeightRequest="175" BackgroundColor="Transparent" Placeholder="Describa la tarea"/>
-            </Frame>
-            <StackLayout Orientation="Horizontal">
-                <Button  Text= "Subir foto" HorizontalOptions = "Center" Clicked="BtnSubirfoto_Clicked"/>
-                <Button Text="Tomar foto" HorizontalOptions="Center" Clicked="BtnTomarFoto_Clicked"/>
+        <ScrollView Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
+                <!--<Label Text="Tarea" TextColor="#01568C" FontSize="20" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />-->
+                <Label Margin="25,25" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding Description}"/>
+                <Label Text="Disponibles: 5" TextColor="#01568C" HorizontalOptions="EndAndExpand" Margin="25,5"/>
+                <Label Text="Condiciones" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+                <Label Margin="25,5" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding condtarea}"/>
+                <Label Text="Desarrollo" FontSize="18" TextColor="Black" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
+                <Frame BorderColor="Transparent" Padding="0" Margin="25,5" CornerRadius="5" BackgroundColor="#F0F0F0">
+                    <local:PlaceholderEditor Margin="0" HeightRequest="175" BackgroundColor="Transparent" Placeholder="Describa la tarea"/>
+                </Frame>
+                <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                    <Button Text="Subir foto" FontSize="Medium" HorizontalOptions="CenterAndExpand" Margin="15" TextColor="White" CornerRadius="5" Clicked="BtnSubirfoto_Clicked" BackgroundColor="#01568C"/>
+                    <Button Text="Tomar foto" FontSize="Medium" HorizontalOptions="CenterAndExpand" Margin="15" TextColor="White" CornerRadius="5" BackgroundColor="#01568C" Clicked="BtnTomarFoto_Clicked"/>
+                </StackLayout>
+                <Image x:Name="FileImage" WidthRequest="400" HeightRequest="300"/>
+                <Label x:Name="LocalPath" HorizontalOptions="FillAndExpand" Margin="25,5"/>
+                <Button Text="Enviar Tarea" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" TextColor="White" BackgroundColor="#01568C" CornerRadius="5"/>
             </StackLayout>
-            <Image x:Name="FileImage" WidthRequest="400" HeightRequest="300"/>
-            <Label x:Name="LocalPath" HorizontalOptions="FillAndExpand" Margin="25,5"/>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
