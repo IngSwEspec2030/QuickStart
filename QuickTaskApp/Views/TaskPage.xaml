@@ -20,7 +20,7 @@
             <StackLayout Orientation="Horizontal" HeightRequest="50" Margin="0,15">
                 <Label Text="Vencimiento" Margin="25,0" FontSize="20" VerticalOptions="CenterAndExpand"/>
                 <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" Margin="0,5,25,5" Padding="0">
-                    <DatePicker MinimumDate="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:dd, MMMM, yyyy}'}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
+                    <DatePicker x:Name="FechaVencimiento" MinimumDate="{Binding fechavencimiento, Source={x:Static sys:DateTime.Now}, StringFormat='{0:dd, MMMM, yyyy}'}" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand"/>
                 </Frame>
             </StackLayout>
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="25,5" Padding="0">

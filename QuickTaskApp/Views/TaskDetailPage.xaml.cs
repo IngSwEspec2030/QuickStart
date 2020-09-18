@@ -18,10 +18,10 @@ namespace QuickTaskApp.Views
             InitializeComponent();
             BindingContext = item;
         }
-        async private void CreateButton_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
-        }
+        //async private void CreateButton_Clicked(object sender, EventArgs e)
+        //{
+        //    await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
+        //}
 
         private async void BtnTomar_Clicked(object sender, EventArgs e)
         {

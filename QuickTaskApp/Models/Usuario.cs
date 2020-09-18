@@ -4,10 +4,12 @@ using System.Text;
 
 namespace QuickTaskApp.Models
 {
-    class Usuario
+    public class Usuario
     {
         public int idUsuario { get; set; }
-        public string Correo { get; set; }
-        public string Password { get; set; }
+        public string nombreusuario { get; set; }
+        public string correousuario { get; set; }
+        public string passwordusuario { get; set; }
+        public bool isusuariovalido { get; set; }
     }
 }

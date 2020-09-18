@@ -15,9 +15,10 @@ namespace QuickTaskApp.Views
     public partial class TaskPage : ContentPage
     {
         Item item = new Item();
-
-        public TaskPage()
+        Usuario usuario;
+        public TaskPage(Usuario user)
         {
+            usuario = user;
             InitializeComponent();
             BindingContext = item;
         }
@@ -27,8 +28,9 @@ namespace QuickTaskApp.Views
             JavaService javaService = new JavaService();
             item = BindingContext as Item;
             item.Saldo = item.Quantity;
-            item.IdUsuario = (int)Application.Current.Properties["id"];
-            item.Text = Application.Current.Properties["name"].ToString();
+            item.IdUsuario = usuario.idUsuario;
+            item.Text = usuario.nombreusuario;
+            item.fechavencimiento = FechaVencimiento.Date;
             var result = await javaService.CreateItem(item);
             await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(item)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
         }

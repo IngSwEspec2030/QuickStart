@@ -11,21 +11,18 @@
         <StackLayout BackgroundColor="White">
             <Label Text="Cree una cuenta" TextColor="#01568C" FontSize="30" Margin="15" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="45,5" Padding="0">
-                <local:MyEntry Placeholder="Nombre" BackgroundColor="Transparent" Margin="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
+                <local:MyEntry Placeholder="Usuario" Text="{Binding nombreusuario}" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
             </Frame>
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="45,5" Padding="0">
-                <local:MyEntry Placeholder="Apellidos" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
+                <local:MyEntry Placeholder="Correo electrónico" Text="{Binding correousuario}" Keyboard="Email" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
             </Frame>
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="45,5" Padding="0">
-                <local:MyEntry Placeholder="Correo electrónico" Keyboard="Email" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45"/>
-            </Frame>
-            <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="45,5" Padding="0">
-                <local:MyEntry Placeholder="Contraseña" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45" IsPassword="True"/>
+                <local:MyEntry Placeholder="Contraseña" Text="{Binding passwordusuario}" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45" IsPassword="True"/>
             </Frame>
             <Frame CornerRadius="5" IsClippedToBounds="True" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" HeightRequest="45" Margin="45,5" Padding="0">
                 <local:MyEntry Placeholder="Repita su contraseña" BackgroundColor="#F0F0F0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="45" IsPassword="True"/>
             </Frame>
-            <Button Text="Registrarse" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="45,5" BackgroundColor="#01568C" TextColor="White" BorderWidth="1" CornerRadius="5"/>
+            <Button Text="Registrarse" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="45,5" BackgroundColor="#01568C" TextColor="White" BorderWidth="1" CornerRadius="5" Clicked="Signup_Clicked"/>
             <Button Text="¿Ya tiene una cuenta?" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="45,5" BorderColor="#01568C" TextColor="#01568C" BorderWidth="1" CornerRadius="5" BackgroundColor="Transparent" Clicked="Login_Clicked"/>
         </StackLayout>
     </ContentPage.Content>

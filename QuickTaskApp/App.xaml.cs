@@ -19,11 +19,6 @@ namespace QuickTaskApp
         public App()
         {
             InitializeComponent();
-
-            if (UseMockDataStore)
-                DependencyService.Register<MockDataStore>();
-            else
-                DependencyService.Register<AzureDataStore>();
             MainPage = new HomePage();
         }
 

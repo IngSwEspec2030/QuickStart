@@ -1,4 +1,5 @@
 ﻿using QuickTaskApp.Models;
+using QuickTaskApp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,32 +31,43 @@ namespace QuickTaskApp.Views
         {
             try
             {
+                JavaService javaService = new JavaService();
                 usuario = BindingContext as Usuario;
-                if (usuario.Correo.Equals("alejandro.nino@gmail.com"))
+                Usuario result = await javaService.ValidateUser(usuario.correousuario, usuario.passwordusuario);
+                
+                if (result.isusuariovalido == true)
                 {
-                    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Alejandro;
-                    Application.Current.Properties["name"] = "Alejandro Niño";
+                    await Navigation.PushModalAsync(new NavigationPage(new WelcomePage(result)));
+                }
+                else
+                {
+                    await DisplayAlert("Error", "Usuario o contraseña errada", "OK");
                 }
 
-                if (usuario.Correo.Equals("chcindyl3@gmail.com"))
-                {
-                    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Lorena;
-                    Application.Current.Properties["name"] = "Lorena Hernández";
-                }
+                
+                //if (usuario.Correo.Equals("alejandro.nino@gmail.com"))
+                //{
+                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Alejandro;
+                //    Application.Current.Properties["name"] = "Alejandro Niño";
+                //}
 
-                if (usuario.Correo.Equals("yuancamo@gmail.com"))
-                {
-                    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Yuri;
-                    Application.Current.Properties["name"] = "Yuri Carrillo";
-                }
+                //if (usuario.Correo.Equals("chcindyl3@gmail.com"))
+                //{
+                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Lorena;
+                //    Application.Current.Properties["name"] = "Lorena Hernández";
+                //}
 
-                if (usuario.Correo.Equals("diego.gomez@tuproyecto.com"))
-                {
-                    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Diego;
-                    Application.Current.Properties["name"] = "Diego Gómez";
-                }
+                //if (usuario.Correo.Equals("yuancamo@gmail.com"))
+                //{
+                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Yuri;
+                //    Application.Current.Properties["name"] = "Yuri Carrillo";
+                //}
 
-                await Navigation.PushModalAsync(new NavigationPage(new WelcomePage()));
+                //if (usuario.Correo.Equals("diego.gomez@tuproyecto.com"))
+                //{
+                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Diego;
+                //    Application.Current.Properties["name"] = "Diego Gómez";
+                //}
             }
             catch (Exception ex)
             {

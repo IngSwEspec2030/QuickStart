@@ -15,9 +15,10 @@ namespace QuickTaskApp.Views
     public partial class TaskListPage : ContentPage
     {
         public ObservableCollection<Item> Items { get; set; }
-
-        public TaskListPage()
+        private Usuario usuario;
+        public TaskListPage(Usuario user)
         {
+            usuario = user;
             InitializeComponent();
 
             //Items = new ObservableCollection<Item>();
@@ -32,7 +33,7 @@ namespace QuickTaskApp.Views
         {
             base.OnAppearing();
             JavaService javaService = new JavaService();
-            var result = await javaService.GetItemsAsync(true);
+            var result = await javaService.GetTaskAsync(true);
             MyListView.ItemsSource = result;
         }
 
@@ -48,7 +49,7 @@ namespace QuickTaskApp.Views
 
         async private void CreateButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new TaskPage()));
+            await Navigation.PushModalAsync(new NavigationPage(new TaskPage(usuario)));
         }
     }
 }

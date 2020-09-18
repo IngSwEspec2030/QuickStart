@@ -21,13 +21,13 @@ namespace QuickTaskApp.Services
             items = new List<Item>();
         }
 
-        public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Item>> GetTaskAsync(bool forceRefresh = false)
         {
             try
             {
                 if (forceRefresh && IsConnected)
                 {
-                    var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/tarea/";
+                    var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/quicktask/tarea";
                     HttpClient client = new HttpClient();
                     var response = await client.GetAsync(url);
                     var json = await response.Content.ReadAsStringAsync();
@@ -54,7 +54,7 @@ namespace QuickTaskApp.Services
                 var stringContent = new StringContent(json,
                                 UnicodeEncoding.UTF8,
                                 "application/json");
-                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/tarea/";
+                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/quicktask/tarea";
                 var response = await cliente.PostAsync(url, stringContent);
                 return response.IsSuccessStatusCode;
             }
@@ -62,6 +62,53 @@ namespace QuickTaskApp.Services
             {
                 throw;
             }
+        }
+
+        public async Task<Usuario> CreateUser(Usuario usuario)
+        {
+            try
+            {
+                HttpClient cliente = new HttpClient();
+                if (usuario == null || !IsConnected)
+                    return null;
+                var json = JsonConvert.SerializeObject(usuario);
+                var stringContent = new StringContent(json,
+                                UnicodeEncoding.UTF8,
+                                "application/json");
+                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8081/api/quicktask/usuario";
+                var response = await cliente.PostAsync(url, stringContent);
+                var usuarioDes = JsonConvert.DeserializeObject<Usuario>(response.Content.ReadAsStringAsync().Result);
+
+                return usuarioDes;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public async Task<Usuario> ValidateUser(string correousuario, string passwordusuario)
+        {
+                try
+                {
+                    HttpClient cliente = new HttpClient();
+                    //if (correousuario == null || passwordusuario == null)
+                    //    return ;
+                    var data = new { correousuario = correousuario, passwordusuario = passwordusuario };
+                    var json = JsonConvert.SerializeObject(data);
+                    var stringContent = new StringContent(json,
+                                    UnicodeEncoding.UTF8,
+                                    "application/json");
+                    var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8081/api/quicktask/usuario/validate";
+                    var response = await cliente.PostAsync(url, stringContent);
+                    var usuarioDes = JsonConvert.DeserializeObject<Usuario>(response.Content.ReadAsStringAsync().Result);
+                    
+                    return usuarioDes;
+                }
+                catch (Exception e)
+                {
+                    return null;
+                }
         }
     }
 }

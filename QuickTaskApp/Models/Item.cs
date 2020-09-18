@@ -21,6 +21,7 @@ namespace QuickTaskApp.Models
         [JsonProperty(PropertyName = "saldounidadestarea")]
         public string Saldo { get; set; }
         public string condtarea { get; set; }
+        public DateTime fechavencimiento { get; set; }
 
     }
 }
