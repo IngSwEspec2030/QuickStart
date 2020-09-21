@@ -22,8 +22,7 @@ namespace QuickTaskApp.Views
     public partial class TaskTakePage : ContentPage
     {
         private MediaFile _mediaFile;
-        private static string PutAWSAccessKey = "AKIAIGDCUCVJ6JHKEYXA";
-        private static string PutAWSSecretKey= "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";
+        
         private Stream stream;
         private TaskSend taskEnviar;
         private int id;
