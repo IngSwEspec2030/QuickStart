@@ -3,7 +3,7 @@ using System;
 
 namespace QuickTaskApp.Models
 {
-    public class Item
+    public class Task
     {
         [JsonProperty(PropertyName = "idtarea")]
         public int Id { get; set; }
@@ -22,6 +22,13 @@ namespace QuickTaskApp.Models
         public string Saldo { get; set; }
         public string condtarea { get; set; }
         public DateTime fechavencimiento { get; set; }
+    }
 
+    public class TaskSend 
+    {
+        public int idtarea { get; set; }
+        public int idusuario { get; set; }
+        public string urladjunto { get; set; }
+        public string descripcion { get; set; }
     }
 }

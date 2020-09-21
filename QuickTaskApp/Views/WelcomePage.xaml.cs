@@ -22,7 +22,7 @@ namespace QuickTaskApp.Views
 
         private async void Tasklist_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new TaskListPage(usuario)));
+            await Navigation.PushModalAsync(new NavigationPage(new TaskListPage(usuario, EnumUsuarios.estadosTarea.Todas)));
         }
     }
 }

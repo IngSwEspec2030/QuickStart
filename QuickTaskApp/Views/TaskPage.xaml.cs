@@ -14,25 +14,25 @@ namespace QuickTaskApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TaskPage : ContentPage
     {
-        Item item = new Item();
+        Models.Task task = new Models.Task();
         Usuario usuario;
         public TaskPage(Usuario user)
         {
             usuario = user;
             InitializeComponent();
-            BindingContext = item;
+            BindingContext = task;
         }
 
         async private void Save_Clicked(object sender, EventArgs e)
         {
             JavaService javaService = new JavaService();
-            item = BindingContext as Item;
-            item.Saldo = item.Quantity;
-            item.IdUsuario = usuario.idUsuario;
-            item.Text = usuario.nombreusuario;
-            item.fechavencimiento = FechaVencimiento.Date;
-            var result = await javaService.CreateItem(item);
-            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(item)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
+            task = BindingContext as Models.Task;
+            task.Saldo = task.Quantity;
+            task.IdUsuario = usuario.idUsuario;
+            task.Text = usuario.nombreusuario;
+            task.fechavencimiento = FechaVencimiento.Date;
+            var result = await javaService.CreateTask(task);
+            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(task, usuario)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
         }
     }
 }

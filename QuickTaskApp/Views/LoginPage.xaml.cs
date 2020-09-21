@@ -42,32 +42,8 @@ namespace QuickTaskApp.Views
                 else
                 {
                     await DisplayAlert("Error", "Usuario o contraseña errada", "OK");
-                }
-
+                }                
                 
-                //if (usuario.Correo.Equals("alejandro.nino@gmail.com"))
-                //{
-                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Alejandro;
-                //    Application.Current.Properties["name"] = "Alejandro Niño";
-                //}
-
-                //if (usuario.Correo.Equals("chcindyl3@gmail.com"))
-                //{
-                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Lorena;
-                //    Application.Current.Properties["name"] = "Lorena Hernández";
-                //}
-
-                //if (usuario.Correo.Equals("yuancamo@gmail.com"))
-                //{
-                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Yuri;
-                //    Application.Current.Properties["name"] = "Yuri Carrillo";
-                //}
-
-                //if (usuario.Correo.Equals("diego.gomez@tuproyecto.com"))
-                //{
-                //    Application.Current.Properties["id"] = EnumUsuarios.Usuarios.Diego;
-                //    Application.Current.Properties["name"] = "Diego Gómez";
-                //}
             }
             catch (Exception ex)
             {

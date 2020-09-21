@@ -5,6 +5,7 @@ using Amazon.S3.Model;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using QuickTaskApp.Models;
+using QuickTaskApp.Services;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -24,10 +25,14 @@ namespace QuickTaskApp.Views
         private static string PutAWSAccessKey = "AKIAIGDCUCVJ6JHKEYXA";
         private static string PutAWSSecretKey= "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";
         private Stream stream;
+        private TaskSend taskEnviar;
+        private int id;
+        Usuario user;
 
-        public TaskTakePage(Item item)
+        public TaskTakePage(Models.Task task, Usuario usuario)
         {
-            BindingContext = item;
+            user = usuario;
+            BindingContext = task;
             InitializeComponent();
         }
 
@@ -65,6 +70,7 @@ namespace QuickTaskApp.Views
 
         private async void BtnSubirfoto_Clicked(object sender, EventArgs e)
         {
+            
             await CrossMedia.Current.Initialize();
             if (!CrossMedia.Current.IsPickPhotoSupported)
             {
@@ -76,9 +82,9 @@ namespace QuickTaskApp.Views
 
             if (_mediaFile == null)
                 return;
-            //LocalPath.Text = _mediaFile.Path;
-
+           
             await AWSUploadPic(_mediaFile.Path, System.IO.Path.GetFileName(_mediaFile.Path));
+            
             FileImage.Source = ImageSource.FromStream(() =>
             {
                 return _mediaFile.GetStream();
@@ -86,11 +92,11 @@ namespace QuickTaskApp.Views
 
         }
 
-        public static async Task AWSUploadPic(string filePath, string requiredFileName)
+        public async System.Threading.Tasks.Task AWSUploadPic(string filePath, string requiredFileName)
         {
             try
             {
-
+                Models.Task task = BindingContext as Models.Task;
                 AWSCredentials creds = new BasicAWSCredentials(PutAWSAccessKey,
                                                                    PutAWSSecretKey);
 
@@ -103,8 +109,13 @@ namespace QuickTaskApp.Views
                 po.Key = requiredFileName;
 
                 var p = await client.PutObjectAsync(po);
-
-
+                taskEnviar = new TaskSend
+                {
+                    idusuario = user.idUsuario,
+                    idtarea = task.Id,
+                    urladjunto = "https://quicktask.s3.us-east-2.amazonaws.com/" + requiredFileName,
+                    descripcion = descripcion.Text
+                };
                 Console.WriteLine("Upload completed");
             }
             catch (AmazonS3Exception amazonS3Exception)
@@ -121,6 +132,21 @@ namespace QuickTaskApp.Views
                     throw new Exception("Error occurred: " + amazonS3Exception.Message);
                 }
             }
+        }
+
+        private async void BtnSendTask_Clicked(object sender, EventArgs e)
+        {
+            JavaService javaService = new JavaService();
+            var resutado = await javaService.SendTask(taskEnviar);
+            if (resutado == true)
+            {
+                await Navigation.PushModalAsync(new NavigationPage(new TaskListPage(user, EnumUsuarios.estadosTarea.Todas)));
+            }
+            else
+            {
+                await DisplayAlert("Error", "Tarea no disponible", "OK");
+            }
+
         }
     }
 }

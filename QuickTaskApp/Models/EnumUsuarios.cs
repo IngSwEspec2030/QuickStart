@@ -14,5 +14,12 @@ namespace QuickTaskApp.Models
             Diego = 4
         }
 
+        public enum estadosTarea
+        {
+            Realizadas = 1,
+            Todas = 2,
+            MeGusta = 3
+        }
+
     }
 }
