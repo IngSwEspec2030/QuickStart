@@ -11,6 +11,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="RegisteredAccounts.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="RegisteredAccounts.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AWSSDK.Core" Version="3.5.1.12" />
     <PackageReference Include="AWSSDK.S3" Version="3.5.1.3" />
     <PackageReference Include="Microsoft.Azure.Management.ContainerRegistry.Fluent" Version="1.34.0" />

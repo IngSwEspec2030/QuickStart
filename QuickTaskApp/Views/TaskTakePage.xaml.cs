@@ -2,6 +2,7 @@
 using Amazon.Runtime;
 using Amazon.S3;
 using Amazon.S3.Model;
+using Newtonsoft.Json;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using QuickTaskApp.Models;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,15 +24,26 @@ namespace QuickTaskApp.Views
     public partial class TaskTakePage : ContentPage
     {
         private MediaFile _mediaFile;
-       
+        private static string PutAWSAccessKey = "";
+        private static string PutAWSSecretKey = "";
         private Stream stream;
         private TaskSend taskEnviar;
-        private int id;
         Usuario user;
+    
 
         public TaskTakePage(Models.Task task, Usuario usuario)
         {
-            //prueba gitignore
+            var assembly = Assembly.GetExecutingAssembly(); ;
+            Stream streamFile = assembly.GetManifestResourceStream("QuickTaskApp.RegisteredAccounts.json");
+
+            using (var reader = new System.IO.StreamReader(streamFile))
+            {
+
+                var json = reader.ReadToEnd();
+                var data = JsonConvert.DeserializeObject<Credentials>(json);
+                PutAWSAccessKey = data.AccessKey;
+                PutAWSSecretKey = data.SecretKey;
+            }
             user = usuario;
             BindingContext = task;
             InitializeComponent();
@@ -97,7 +110,7 @@ namespace QuickTaskApp.Views
             try
             {
                 Models.Task task = BindingContext as Models.Task;
-                //AWSCredentials creds = new BasicAWSCredentials(PutAWSAccessKey,
+                AWSCredentials creds = new BasicAWSCredentials(PutAWSAccessKey,
                                                                    PutAWSSecretKey);
 
                 var client = new AmazonS3Client(creds, RegionEndpoint.USEast2);    // "USWest2" replace your code(Amazon)
@@ -129,7 +142,6 @@ namespace QuickTaskApp.Views
                 }
                 else
                 {
-                    //prueba
                     throw new Exception("Error occurred: " + amazonS3Exception.Message);
                 }
             }
