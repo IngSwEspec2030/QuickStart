@@ -22,7 +22,7 @@ namespace QuickTaskApp.Views
     public partial class TaskTakePage : ContentPage
     {
         private MediaFile _mediaFile;
-        
+       
         private Stream stream;
         private TaskSend taskEnviar;
         private int id;
@@ -30,6 +30,7 @@ namespace QuickTaskApp.Views
 
         public TaskTakePage(Models.Task task, Usuario usuario)
         {
+            //prueba gitignore
             user = usuario;
             BindingContext = task;
             InitializeComponent();
@@ -96,7 +97,7 @@ namespace QuickTaskApp.Views
             try
             {
                 Models.Task task = BindingContext as Models.Task;
-                AWSCredentials creds = new BasicAWSCredentials(PutAWSAccessKey,
+                //AWSCredentials creds = new BasicAWSCredentials(PutAWSAccessKey,
                                                                    PutAWSSecretKey);
 
                 var client = new AmazonS3Client(creds, RegionEndpoint.USEast2);    // "USWest2" replace your code(Amazon)
