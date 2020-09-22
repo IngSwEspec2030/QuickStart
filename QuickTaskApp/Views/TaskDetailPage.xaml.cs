@@ -15,11 +15,24 @@ namespace QuickTaskApp.Views
     public partial class TaskDetailPage : ContentPage
     {
         private Usuario user;
-        public TaskDetailPage(Models.Task task, Usuario usuario)
+        public TaskDetailPage(Models.Task task, Usuario usuario, bool Realizadas)
         {
-            user = usuario;
             InitializeComponent();
             BindingContext = task;
+
+            if (Realizadas == true)
+            {
+                Detalles.IsVisible = true;
+                Tomar.IsVisible = false;
+                Liked.IsVisible = false;
+            }
+            else
+            {
+                Detalles.IsVisible = false;
+                Tomar.IsVisible = true;
+                Liked.IsVisible = true;
+            }
+            user = usuario;
         }
         //async private void CreateButton_Clicked(object sender, EventArgs e)
         //{
@@ -32,6 +45,17 @@ namespace QuickTaskApp.Views
             await Navigation.PushModalAsync(new NavigationPage(new TaskTakePage(task, user)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Tarea" });
         }
 
+        private async void BtnDetalles_Clicked(object sender, EventArgs e)
+        {
+            Models.Task task = BindingContext as Models.Task;
+            JavaService javaService = new JavaService();
+            IEnumerable<TaskSend> lista = await javaService.GetTaskDetails(task.Id);
+            if(lista.Count() > 0)
+                await Navigation.PushModalAsync(new NavigationPage(new TaskDetailDonePage(lista)));
+            else
+                await DisplayAlert("Error", "Aún no se ha realizado esta tarea", "OK");
+        }
+        
         async private void BtnLiked_Clicked(object sender, EventArgs e)
         {
             JavaService javaService = new JavaService();

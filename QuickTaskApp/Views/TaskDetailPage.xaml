@@ -19,8 +19,9 @@
             <Label Text="Condiciones" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
             <Label Margin="25,5" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding condtarea}"/>
             <Label Text="{Binding Price, StringFormat='PAGA $ {0}'}" TextColor="#01568C" FontSize="40" FontAttributes="Bold" Margin="10" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
-            <Button Text="Tomar" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" TextColor="White" BackgroundColor="#01568C" CornerRadius="5" Clicked="BtnTomar_Clicked"/>
-            <Button Text="Me interesa" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" BorderWidth="1" BorderColor="#01568C" TextColor="#01568C" BackgroundColor="White" CornerRadius="5" Clicked="BtnLiked_Clicked"/>
+            <Button x:Name="Detalles" Text="Detalles" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" TextColor="White" BackgroundColor="#01568C" CornerRadius="5" Clicked="BtnDetalles_Clicked"/>
+            <Button x:Name="Tomar" Text="Tomar" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" TextColor="White" BackgroundColor="#01568C" CornerRadius="5" Clicked="BtnTomar_Clicked"/>
+            <Button x:Name="Liked" Text="Me interesa" FontSize="Medium" HorizontalOptions="FillAndExpand" Margin="25,5" BorderWidth="1" BorderColor="#01568C" TextColor="#01568C" BackgroundColor="White" CornerRadius="5" Clicked="BtnLiked_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

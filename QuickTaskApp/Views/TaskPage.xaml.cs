@@ -32,7 +32,7 @@ namespace QuickTaskApp.Views
             task.Text = usuario.nombreusuario;
             task.fechavencimiento = FechaVencimiento.Date;
             var result = await javaService.CreateTask(task);
-            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(task, usuario)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
+            await Navigation.PushAsync(new NavigationPage(new TaskDetailPage(task, usuario, false)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
         }
     }
 }

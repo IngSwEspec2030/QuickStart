@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="QuickTaskApp.Views.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Mi cuenta" HorizontalOptions="FillAndExpand" Padding="20,0" TextColor="#4E4E4E" HeightRequest="45" HorizontalTextAlignment="Center" BackgroundColor="White" VerticalTextAlignment="Center" FontSize="20"/>
+            <Label Text="General" HorizontalOptions="FillAndExpand" Padding="20,0" BackgroundColor="#DADADA" HeightRequest="45" HorizontalTextAlignment="Start" TextColor="Gray" VerticalTextAlignment="Center" FontSize="20"/>
+            <ListView x:Name="Opciones"
+                      ItemTapped="Handle_ItemTapped">
+                <ListView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Medios de pago</x:String>
+                        <x:String>Tareas creadas</x:String>
+                        <x:String>Tareas tomadas</x:String>
+                        <x:String>Salir</x:String>
+                    </x:Array>
+                </ListView.ItemsSource>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

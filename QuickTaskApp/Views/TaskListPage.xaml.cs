@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
-
+using System.Xml;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,6 +17,7 @@ namespace QuickTaskApp.Views
     {
         public ObservableCollection<Models.Task> Tasks { get; set; }
         private Usuario usuario;
+        private bool MisTareas;
         private EnumUsuarios.estadosTarea estadoTarea;
         public TaskListPage(Usuario user, EnumUsuarios.estadosTarea estado)
         {
@@ -25,12 +26,14 @@ namespace QuickTaskApp.Views
             InitializeComponent();
             if (estado == EnumUsuarios.estadosTarea.MeGusta)
             {
+                MisTareas = false;
                 buscar.Source = "BuscarOff.PNG";
                 realizadas.Source = "Realizadas.PNG";
                 guardadas.Source = "GuardadasOn.PNG";
             }
             else if (estado == EnumUsuarios.estadosTarea.Realizadas)
             {
+                MisTareas = true;
                 buscar.Source = "BuscarOff.PNG";
                 realizadas.Source = "RealizadasOn.PNG";
                 guardadas.Source = "Guardadas.PNG";
@@ -38,10 +41,18 @@ namespace QuickTaskApp.Views
             }
             else if (estado == EnumUsuarios.estadosTarea.Todas)
             {
+                MisTareas = false;
                 buscar.Source = "Buscar.PNG";
                 realizadas.Source = "Realizadas.PNG";
                 guardadas.Source = "Guardadas.PNG";
 
+            }
+            else
+            {
+                MisTareas = true;
+                buscar.Source = "BuscarOff.PNG";
+                realizadas.Source = "Realizadas.PNG";
+                guardadas.Source = "Guardadas.PNG";
             }
 
             //Items = new ObservableCollection<Item>();
@@ -66,9 +77,13 @@ namespace QuickTaskApp.Views
             {
                 result = await javaService.GetDoneTaskAsync(usuario.idUsuario, "ENTREGADA");
             }
-            else
+            else if (estadoTarea == EnumUsuarios.estadosTarea.MeGusta)
             {
                 result = await javaService.GetDoneTaskAsync(usuario.idUsuario, "FAVORITA");
+            }
+            else
+            {
+                result = await javaService.GetTaskXUserAsync(usuario.idUsuario);
             }
             MyListView.ItemsSource = result;
         }
@@ -79,7 +94,7 @@ namespace QuickTaskApp.Views
             {
                 ((ListView)sender).SelectedItem = null;
                 Models.Task task = (Models.Task)e.Item;
-                await Navigation.PushModalAsync(new NavigationPage(new TaskDetailPage(task, usuario)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
+                await Navigation.PushModalAsync(new NavigationPage(new TaskDetailPage(task, usuario, MisTareas)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Detalle Tarea" });
             }
         }
 
@@ -101,6 +116,11 @@ namespace QuickTaskApp.Views
         async private void AllTasks_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new TaskListPage(usuario, EnumUsuarios.estadosTarea.Todas));
+        }
+
+        async private void Profile_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ProfilePage(usuario)) { BarBackgroundColor = Color.White, BarTextColor = Color.FromHex("#4E4E4E"), Title = "Mi Cuenta" }); ;
         }
     }
 }

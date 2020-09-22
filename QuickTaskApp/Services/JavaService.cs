@@ -85,6 +85,26 @@ namespace QuickTaskApp.Services
             }
         }
 
+        public async Task<IEnumerable<TaskSend>> GetTaskDetails(int idTarea)
+        {
+            try
+            {
+                IEnumerable<TaskSend> sendTask;
+                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/quicktask/tarea/detalle?tarea=" + idTarea;
+                client = new HttpClient();
+                var response = await client.GetAsync(url);
+                var json = await response.Content.ReadAsStringAsync();
+                //return JsonConvert.DeserializeObject<Item>(json);vert.DeserializeObject<IEnumerable<Item>>(json));
+                sendTask = await System.Threading.Tasks.Task.Run(() => JsonConvert.DeserializeObject<IEnumerable<TaskSend>>(json));
+
+                return sendTask;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
         public async Task<bool> CreateTask(Models.Task task)
         {
             try

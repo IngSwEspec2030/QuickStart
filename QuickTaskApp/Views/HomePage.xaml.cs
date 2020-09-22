@@ -22,5 +22,10 @@ namespace QuickTaskApp.Views
         {
             await Navigation.PushModalAsync(new NavigationPage(new LoginPage()));
         }
+
+        async private void Explore_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new WelcomePage(null)));
+        }
     }
 }

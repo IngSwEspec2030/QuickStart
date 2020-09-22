@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="QuickTaskApp.Views._views.MyCardsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Medios de pago" HorizontalOptions="FillAndExpand" Padding="20,0" TextColor="#4E4E4E" HeightRequest="45" HorizontalTextAlignment="Center" BackgroundColor="White" VerticalTextAlignment="Center" FontSize="20"/>
+            <Image Source="MediosPago.PNG" Aspect="AspectFill"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

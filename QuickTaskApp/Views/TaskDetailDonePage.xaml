@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             NavigationPage.HasNavigationBar="False"
+             mc:Ignorable="d"
+             x:Class="QuickTaskApp.Views.TaskDetailDonePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Detalles de la tarea" HorizontalOptions="FillAndExpand" Padding="20,0" BackgroundColor="#DADADA" HeightRequest="45" HorizontalTextAlignment="Center" TextColor="Gray" VerticalTextAlignment="Center" FontSize="20"/>
+        <ListView x:Name="MyListView"
+            ItemsSource="{Binding TaskSend}"
+            HasUnevenRows="True"
+            CachingStrategy="RecycleElement"
+            SeparatorVisibility="None">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="8,8,8,8" Orientation="Vertical">
+                            <Image Source="{Binding urladjunto}" BackgroundColor="#F0F0F0" Margin="30,0" Aspect="AspectFill" WidthRequest="400" HeightRequest="300"/>
+                            <Label Text="{Binding descripcion}" TextColor="#4E4E4E" HorizontalOptions="FillAndExpand" Margin="25,5"/>
+                            <BoxView BackgroundColor="LightGray" HeightRequest="0.5" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

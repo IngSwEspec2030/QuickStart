@@ -70,7 +70,7 @@ namespace QuickTaskApp.Views
             if (_mediaFile == null)
                 return;
 
-            DisplayAlert("File Location", _mediaFile.Path, "OK");
+            //DisplayAlert("File Location", _mediaFile.Path, "OK");
 
             await AWSUploadPic(_mediaFile.Path, System.IO.Path.GetFileName(_mediaFile.Path));
             FileImage.Source = ImageSource.FromStream(() =>

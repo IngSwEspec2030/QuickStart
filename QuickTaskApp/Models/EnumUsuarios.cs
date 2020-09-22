@@ -18,7 +18,8 @@ namespace QuickTaskApp.Models
         {
             Realizadas = 1,
             Todas = 2,
-            MeGusta = 3
+            MeGusta = 3,
+            MisTareas = 4
         }
 
     }
