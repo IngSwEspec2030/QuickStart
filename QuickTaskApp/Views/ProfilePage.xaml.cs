@@ -34,7 +34,7 @@ namespace QuickTaskApp.Views
                 if (e.Item == "Tareas tomadas")
                     await Navigation.PushModalAsync(new NavigationPage(new TaskListPage(user, EnumUsuarios.estadosTarea.Realizadas)));
                 if (e.Item == "Salir")
-                    await Navigation.PopModalAsync();
+                    App.Current.MainPage = new HomePage();
             }
         }
     }
