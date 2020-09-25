@@ -42,7 +42,10 @@ namespace QuickTaskApp.Views
         private async void BtnTomar_Clicked(object sender, EventArgs e)
         {
             Models.Task task = BindingContext as Models.Task;
+            if(int.Parse(task.Saldo) > 0)
             await Navigation.PushModalAsync(new NavigationPage(new TaskTakePage(task, user)) { BarBackgroundColor = Color.FromHex("#D2D2D2"), BarTextColor = Color.White, Title = "Tarea" });
+            else
+                await DisplayAlert("Alerta", "Esta tarea ya fue realizada.", "OK");
         }
 
         private async void BtnDetalles_Clicked(object sender, EventArgs e)
@@ -63,7 +66,7 @@ namespace QuickTaskApp.Views
             var result = await javaService.LikedTask(task.Id, user.idUsuario);
             if (result == true)
             {
-                await DisplayAlert("Succes", "Tarea agregada", "OK");
+                await DisplayAlert("Success", "Tarea agregada", "OK");
                 await Navigation.PushModalAsync(new NavigationPage(new TaskListPage(user, EnumUsuarios.estadosTarea.MeGusta)));
 
             }

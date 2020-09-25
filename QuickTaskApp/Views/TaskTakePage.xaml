@@ -12,7 +12,7 @@
             <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand" BackgroundColor="White">
                 <!--<Label Text="Tarea" TextColor="#01568C" FontSize="20" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />-->
                 <Label Margin="25,25" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding Description}"/>
-                <Label Text="Disponibles: 5" TextColor="#01568C" HorizontalOptions="EndAndExpand" Margin="25,5"/>
+                <Label x:Name="disponible" TextColor="#01568C" HorizontalOptions="EndAndExpand" Margin="25,5"/>
                 <Label Text="Condiciones" TextColor="Black" FontSize="18" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />
                 <Label Margin="25,5" FontSize="16" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"  TextColor="#4E4E4E" HeightRequest="120" Text="{Binding condtarea}"/>
                 <Label Text="Desarrollo" FontSize="18" TextColor="Black" FontAttributes="Bold" Margin="15" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" />

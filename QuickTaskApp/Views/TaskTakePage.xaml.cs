@@ -47,6 +47,7 @@ namespace QuickTaskApp.Views
             user = usuario;
             BindingContext = task;
             InitializeComponent();
+            disponible.Text = "Cantidad: " + task.Saldo;
         }
 
         private async void BtnTomarFoto_Clicked(object sender, EventArgs e)

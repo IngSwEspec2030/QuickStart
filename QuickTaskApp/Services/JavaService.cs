@@ -188,7 +188,7 @@ namespace QuickTaskApp.Services
                 var stringContent = new StringContent(json,
                                 UnicodeEncoding.UTF8,
                                 "application/json");
-                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8081/api/quicktask/usuario";
+                var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/quicktask/usuario";
                 var response = await client.PostAsync(url, stringContent);
                 var usuarioDes = JsonConvert.DeserializeObject<Usuario>(response.Content.ReadAsStringAsync().Result);
 
@@ -212,7 +212,7 @@ namespace QuickTaskApp.Services
                     var stringContent = new StringContent(json,
                                     UnicodeEncoding.UTF8,
                                     "application/json");
-                    var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8081/api/quicktask/usuario/validate";
+                    var url = "http://ec2-18-219-163-1.us-east-2.compute.amazonaws.com:8080/api/quicktask/usuario/validate";
                     var response = await client.PostAsync(url, stringContent);
                     var usuarioDes = JsonConvert.DeserializeObject<Usuario>(response.Content.ReadAsStringAsync().Result);
                     
